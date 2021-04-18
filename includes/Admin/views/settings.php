@@ -65,7 +65,7 @@
                             <?php for ($i = 1; $i < 5; $i++) : ?>
                                 <label class="button_effects_radio">
                                     <input type="radio" name="button_design" value="<?php echo $i; ?>" <?php if (get_option('psb_button_design', '3') == $i) echo 'checked'; ?> />
-                                    <img style="width: 80%;" src="<?php echo SDEVS_SOCIAL_SHARE_ASSETS . '/images/effects/' . $i . '.gif'; ?>" alt="">
+                                    <img style="width: 80%;" src="<?php echo 'https://springdevs.s3.us-east-2.amazonaws.com/sharebutton/effects/' . $i . '.gif'; ?>" />
                                 </label>
                             <?php endfor; ?>
                         </td>
