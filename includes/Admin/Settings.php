@@ -18,7 +18,7 @@ class Settings
 
     public function admin_menu()
     {
-        $hook = add_menu_page(__('Share Buttons', 'sdevs_wea'), __('Share Buttons', 'sdevs_wea'), 'manage_options', 'sdevs-share-buttons', array($this, 'settings_content'), 'dashicons-share', 80);
+        $hook = add_menu_page(__('Share Buttons', 'sdevs_psb'), __('Share Buttons', 'sdevs_psb'), 'manage_options', 'sdevs-share-buttons', array($this, 'settings_content'), 'dashicons-share', 80);
         add_action('load-' . $hook, [$this, 'init_hooks']);
     }
 

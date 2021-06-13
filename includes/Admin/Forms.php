@@ -38,7 +38,7 @@ class Forms
 
             add_action('admin_notices', function (): void {
                 $class = 'notice notice-success';
-                $message = __('Settings saved !!', 'sdevs_wea');
+                $message = __('Settings saved !!', 'sdevs_psb');
                 printf('<div class="%1$s"><p>%2$s</p></div>', esc_attr($class), esc_html($message));
             });
         }
