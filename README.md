@@ -1,4 +1,4 @@
-# Product Sharing Buttons
+# Social Sharing Buttons
 
 Share your zest with your friends and others.
 
