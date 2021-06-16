@@ -1,6 +1,6 @@
 <?php
 
-namespace Springdevs\SocialShare\Admin;
+namespace Springdevs\SSB\Admin;
 
 /**
  * Form Handler
@@ -33,14 +33,36 @@ class Forms
             update_option('psb_button_design', $button_design);
 
             if (is_array($_POST['social_buttons'])) {
-                update_option('psb_social_buttons', $_POST['social_buttons']);
+                update_option('psb_social_buttons', $this->sanitize_array_field($_POST['social_buttons']));
             }
 
             add_action('admin_notices', function (): void {
                 $class = 'notice notice-success';
-                $message = __('Settings saved !!', 'sdevs_psb');
+                $message = __('Settings saved !!', 'sdevs_social_share');
                 printf('<div class="%1$s"><p>%2$s</p></div>', esc_attr($class), esc_html($message));
             });
         }
+    }
+
+    /**
+     * Recursive sanitation an array
+     * 
+     * @param $array
+     * @since  0.1
+     * @return mixed
+     */
+    public function sanitize_array_field(array $arrays)
+    {
+        $sanitized_array = [];
+        foreach ($arrays as $key => $array) {
+            $value = false;
+            if (is_array($array)) {
+                $value = $this->sanitize_array_field($array);
+            } else {
+                $value = sanitize_text_field($array);
+            }
+            $sanitized_array[$key] = $value;
+        }
+        return $sanitized_array;
     }
 }

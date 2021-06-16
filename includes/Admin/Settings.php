@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Springdevs\SocialShare\Admin;
+namespace Springdevs\SSB\Admin;
 
 
 /**
  * Class Settings
- * @package Springdevs\SocialShare\Admin
+ * @package Springdevs\SSB\Admin
  */
 class Settings
 {
@@ -18,7 +18,7 @@ class Settings
 
     public function admin_menu()
     {
-        $hook = add_menu_page(__('Share Buttons', 'sdevs_psb'), __('Share Buttons', 'sdevs_psb'), 'manage_options', 'sdevs-share-buttons', array($this, 'settings_content'), 'dashicons-share', 80);
+        $hook = add_menu_page(__('Share Buttons', 'sdevs_social_share'), __('Share Buttons', 'sdevs_social_share'), 'manage_options', 'sdevs-share-buttons', array($this, 'settings_content'), 'dashicons-share', 80);
         add_action('load-' . $hook, [$this, 'init_hooks']);
     }
 

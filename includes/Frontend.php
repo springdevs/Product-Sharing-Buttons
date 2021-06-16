@@ -1,8 +1,8 @@
 <?php
 
-namespace Springdevs\SocialShare;
+namespace Springdevs\SSB;
 
-use Springdevs\SocialShare\Frontend\Product;
+use Springdevs\SSB\Frontend\Product;
 
 /**
  * Frontend handler class

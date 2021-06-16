@@ -1,14 +1,14 @@
 <?php
 /*
-Plugin Name: Product Sharing Buttons
-Plugin URI: https://wordpress.org/plugins/sdevs-wc-social-share
-Description: Social Share buttons on woocommerce products.
+Plugin Name: Social Sharing Button
+Plugin URI: https://wordpress.org/plugins/wcma-social-sharing-button
+Description: Share your zest with your friends and others.
 Version: 1.0.0
 Author: SpringDevs
 Author URI: https://springdevs.com/
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: sdevs_psb
+Text Domain: sdevs_social_share
 Domain Path: /languages
 */
 
@@ -46,11 +46,11 @@ if (!defined('ABSPATH')) {
 require_once __DIR__ . '/vendor/autoload.php';
 
 /**
- * Sdevs_social_share class
+ * Sdevs_ssb class
  *
- * @class Sdevs_social_share The class that holds the entire Sdevs_social_share plugin
+ * @class Sdevs_ssb The class that holds the entire Sdevs_ssb plugin
  */
-final class Sdevs_social_share
+final class Sdevs_ssb
 {
     /**
      * Plugin version
@@ -80,19 +80,19 @@ final class Sdevs_social_share
     }
 
     /**
-     * Initializes the Sdevs_social_share() class
+     * Initializes the Sdevs_ssb() class
      *
-     * Checks for an existing Sdevs_social_share() instance
+     * Checks for an existing Sdevs_ssb() instance
      * and if it doesn't find one, creates it.
      *
-     * @return Sdevs_social_share|bool
+     * @return Sdevs_ssb|bool
      */
     public static function init()
     {
         static $instance = false;
 
         if (!$instance) {
-            $instance = new Sdevs_social_share();
+            $instance = new Sdevs_ssb();
         }
 
         return $instance;
@@ -133,12 +133,12 @@ final class Sdevs_social_share
      */
     public function define_constants()
     {
-        define('SDEVS_SOCIAL_SHARE_VERSION', self::version);
-        define('SDEVS_SOCIAL_SHARE_FILE', __FILE__);
-        define('SDEVS_SOCIAL_SHARE_PATH', dirname(SDEVS_SOCIAL_SHARE_FILE));
-        define('SDEVS_SOCIAL_SHARE_INCLUDES', SDEVS_SOCIAL_SHARE_PATH . '/includes');
-        define('SDEVS_SOCIAL_SHARE_URL', plugins_url('', SDEVS_SOCIAL_SHARE_FILE));
-        define('SDEVS_SOCIAL_SHARE_ASSETS', SDEVS_SOCIAL_SHARE_URL . '/assets');
+        define('SDEVS_SSB_VERSION', self::version);
+        define('SDEVS_SSB_FILE', __FILE__);
+        define('SDEVS_SSB_PATH', dirname(SDEVS_SSB_FILE));
+        define('SDEVS_SSB_INCLUDES', SDEVS_SSB_PATH . '/includes');
+        define('SDEVS_SSB_URL', plugins_url('', SDEVS_SSB_FILE));
+        define('SDEVS_SSB_ASSETS', SDEVS_SSB_URL . '/assets');
     }
 
     /**
@@ -160,15 +160,15 @@ final class Sdevs_social_share
     public function includes()
     {
         if ($this->is_request('admin')) {
-            $this->container['admin'] = new Springdevs\SocialShare\Admin();
+            $this->container['admin'] = new Springdevs\SSB\Admin();
         }
 
         if ($this->is_request('frontend')) {
-            $this->container['frontend'] = new Springdevs\SocialShare\Frontend();
+            $this->container['frontend'] = new Springdevs\SSB\Frontend();
         }
 
         if ($this->is_request('ajax')) {
-            // require_once SDEVS_SOCIAL_SHARE_INCLUDES . '/class-ajax.php';
+            // require_once SDEVS_SSB_INCLUDES . '/class-ajax.php';
         }
     }
 
@@ -180,9 +180,6 @@ final class Sdevs_social_share
     public function init_hooks()
     {
         add_action('init', [$this, 'init_classes']);
-
-        // Localize our plugin
-        add_action('init', [$this, 'localization_setup']);
     }
 
     /**
@@ -193,21 +190,11 @@ final class Sdevs_social_share
     public function init_classes()
     {
         if ($this->is_request('ajax')) {
-            // $this->container['ajax'] =  new Springdevs\SocialShare\Ajax();
+            // $this->container['ajax'] =  new Springdevs\SSB\Ajax();
         }
 
-        $this->container['api']    = new Springdevs\SocialShare\Api();
-        $this->container['assets'] = new Springdevs\SocialShare\Assets();
-    }
-
-    /**
-     * Initialize plugin for localization
-     *
-     * @uses load_plugin_textdomain()
-     */
-    public function localization_setup()
-    {
-        load_plugin_textdomain('sdevs_psb', false, dirname(plugin_basename(__FILE__)) . '/languages/');
+        $this->container['api']    = new Springdevs\SSB\Api();
+        $this->container['assets'] = new Springdevs\SSB\Assets();
     }
 
     /**
@@ -236,19 +223,19 @@ final class Sdevs_social_share
                 return (!is_admin() || defined('DOING_AJAX')) && !defined('DOING_CRON');
         }
     }
-} // Sdevs_social_share
+} // Sdevs_ssb
 
 /**
  * Initialize the main plugin
  *
- * @return \Sdevs_social_share|bool
+ * @return \Sdevs_ssb|bool
  */
-function sdevs_social_share()
+function sdevs_ssb()
 {
-    return Sdevs_social_share::init();
+    return Sdevs_ssb::init();
 }
 
 /**
  *  kick-off the plugin
  */
-sdevs_social_share();
+sdevs_ssb();

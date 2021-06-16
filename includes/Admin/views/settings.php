@@ -1,30 +1,30 @@
 <div class="wrap">
-    <h3 style="text-align: center;"><?php _e('Woocommerce Product Social Share Buttons', 'sdevs_psb'); ?></h3>
+    <h3 style="text-align: center;"><?php _e('Woocommerce Product Social Share Buttons', 'sdevs_social_share'); ?></h3>
     <?php settings_errors(); ?>
     <form method="POST">
         <?php wp_nonce_field('psb_settings_form'); ?>
         <?php
         $button_positions = [
-            'default' => __('Default', 'sdevs_psb'),
-            'after_product_image' => __('After Product Image', 'sdevs_psb'),
-            'after_product_title' => __('After Product Title', 'sdevs_psb'),
-            'before_product_title' => __('Before Product Title', 'sdevs_psb'),
-            'after_short_desc' => __('After Short Description', 'sdevs_psb'),
-            'after_add_to_cart_button' => __('After Add To Cart Button', 'sdevs_psb'),
-            'inside_description' => __('Inside Description', 'sdevs_psb'),
+            'default' => __('Default', 'sdevs_social_share'),
+            'after_product_image' => __('After Product Image', 'sdevs_social_share'),
+            'after_product_title' => __('After Product Title', 'sdevs_social_share'),
+            'before_product_title' => __('Before Product Title', 'sdevs_social_share'),
+            'after_short_desc' => __('After Short Description', 'sdevs_social_share'),
+            'after_add_to_cart_button' => __('After Add To Cart Button', 'sdevs_social_share'),
+            'inside_description' => __('Inside Description', 'sdevs_social_share'),
         ];
         $social_buttons = [
-            'facebook' => __('Facebook', 'sdevs_psb'),
-            'twitter' => __('Twitter', 'sdevs_psb'),
-            'pinterest' => __('Pinterest', 'sdevs_psb'),
-            'email' => __('Email', 'sdevs_psb'),
-            'instagram' => __('Instagram', 'sdevs_psb'),
-            'linkedin' => __('LinkedIn', 'sdevs_psb'),
-            'reddit' => __('Reddit', 'sdevs_psb'),
-            'tumblr' => __('Tumblr', 'sdevs_psb'),
-            'whatsapp' => __('WhatsApp', 'sdevs_psb'),
-            'skype' => __('Skype', 'sdevs_psb'),
-            'telegram' => __('Telegram', 'sdevs_psb'),
+            'facebook' => __('Facebook', 'sdevs_social_share'),
+            'twitter' => __('Twitter', 'sdevs_social_share'),
+            'pinterest' => __('Pinterest', 'sdevs_social_share'),
+            'email' => __('Email', 'sdevs_social_share'),
+            'instagram' => __('Instagram', 'sdevs_social_share'),
+            'linkedin' => __('LinkedIn', 'sdevs_social_share'),
+            'reddit' => __('Reddit', 'sdevs_social_share'),
+            'tumblr' => __('Tumblr', 'sdevs_social_share'),
+            'whatsapp' => __('WhatsApp', 'sdevs_social_share'),
+            'skype' => __('Skype', 'sdevs_social_share'),
+            'telegram' => __('Telegram', 'sdevs_social_share'),
         ];
         ?>
         <div class="card" style="max-width: 100%;">
@@ -33,7 +33,7 @@
                     <tr>
                         <th scope="row">
                             <label for="display_product_share_button">
-                                <?php _e('Show \ Hide Sharing Buttons', 'sdevs_psb'); ?>
+                                <?php _e('Show \ Hide Sharing Buttons', 'sdevs_social_share'); ?>
                             </label>
                         </th>
                         <td>
@@ -46,7 +46,7 @@
                     <tr>
                         <th scope="row">
                             <label for="buttons_visible_position">
-                                <?php _e('Buttons Visible Position', 'sdevs_psb'); ?>
+                                <?php _e('Buttons Visible Position', 'sdevs_social_share'); ?>
                             </label>
                         </th>
                         <td>
@@ -72,7 +72,7 @@
                     </tr>
                     <tr>
                         <th scope="row" style="vertical-align: middle;">
-                            <label><?php _e('Social Buttons', 'sdevs_psb'); ?></label>
+                            <label><?php _e('Social Buttons', 'sdevs_social_share'); ?></label>
                         </th>
                         <td>
                             <?php foreach ($social_buttons as $social_button_key => $social_button_value) : ?>
