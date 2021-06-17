@@ -64,8 +64,8 @@
                         <td>
                             <?php for ($i = 1; $i < 5; $i++) : ?>
                                 <label class="button_effects_radio">
-                                    <input type="radio" name="button_design" value="<?php echo $i; ?>" <?php if (get_option('psb_button_design', '3') == $i) echo 'checked'; ?> />
-                                    <img style="width: 80%;" src="<?php echo 'https://springdevs.s3.us-east-2.amazonaws.com/sharebutton/effects/' . $i . '.gif'; ?>" />
+                                    <input type="radio" name="button_design" value="<?php echo $i; ?>" <?php if (get_option('psb_button_design', '3') == $i) echo esc_html('checked'); ?> />
+                                    <img style="width: 80%;" src="<?php echo esc_html(SDEVS_SSB_ASSETS . '/images/effects/' . $i . '.gif'); ?>" />
                                 </label>
                             <?php endfor; ?>
                         </td>
@@ -78,8 +78,8 @@
                             <?php foreach ($social_buttons as $social_button_key => $social_button_value) : ?>
                                 <p>
                                     <label>
-                                        <input type="checkbox" name="social_buttons[]" value="<?php echo $social_button_key; ?>" <?php if (in_array($social_button_key, get_option('psb_social_buttons', []))) echo 'checked'; ?> />
-                                        <?php echo $social_button_value; ?>
+                                        <input type="checkbox" name="social_buttons[]" value="<?php echo esc_html($social_button_key); ?>" <?php if (in_array($social_button_key, get_option('psb_social_buttons', []))) echo esc_html('checked'); ?> />
+                                        <?php echo esc_html($social_button_value); ?>
                                     </label>
                                 </p>
                             <?php endforeach; ?>
