@@ -22,7 +22,7 @@ Share your zest with your friends and others.
 2. Twitter Share
 3. Linkdin Share 
 4. YouTube Share 
-5. and Share with any Social network 
+5. and Share with any other Social network 
  
 == Installation ==
 
@@ -37,6 +37,13 @@ Share your zest with your friends and others.
         1. Upload the entire `WCMA Social Sharing Button` folder to the `/wp-content/plugins/` directory.
         2. Visit 'Plugins'.
         3. Activate the `WCMA Social Sharing Button` plugin.
+
+
+== Screenshots ==
+
+1. Share Button setup from admin.    
+2. Share Button front-end example
+ 
 
 == Changelog ==
 
