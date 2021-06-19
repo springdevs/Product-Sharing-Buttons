@@ -9,6 +9,11 @@
   flex-wrap: wrap;
   align-items: center;
 }
+
+.psb-social-buttons .fa {
+  font: normal normal normal 14px/1 FontAwesome !important;
+}
+
 .psb-effect a:last-child {
   margin-right: 0px;
 }
