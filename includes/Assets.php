@@ -1,6 +1,6 @@
 <?php
 
-namespace Springdevs\SocialShare;
+namespace Springdevs\SSB;
 
 /**
  * Scripts and Styles Class
@@ -42,7 +42,7 @@ class Assets
         foreach ($scripts as $handle => $script) {
             $deps      = isset($script['deps']) ? $script['deps'] : false;
             $in_footer = isset($script['in_footer']) ? $script['in_footer'] : false;
-            $version   = isset($script['version']) ? $script['version'] : SDEVS_SOCIAL_SHARE_VERSION;
+            $version   = isset($script['version']) ? $script['version'] : SDEVS_SSB_VERSION;
 
             wp_register_script($handle, $script['src'], $deps, $version, $in_footer);
         }
@@ -60,7 +60,7 @@ class Assets
         foreach ($styles as $handle => $style) {
             $deps = isset($style['deps']) ? $style['deps'] : false;
 
-            wp_register_style($handle, $style['src'], $deps, SDEVS_SOCIAL_SHARE_VERSION);
+            wp_register_style($handle, $style['src'], $deps, SDEVS_SSB_VERSION);
         }
     }
 
@@ -71,7 +71,7 @@ class Assets
      */
     public function get_scripts()
     {
-        $plugin_js_assets_path = SDEVS_SOCIAL_SHARE_ASSETS . '/js/';
+        $plugin_js_assets_path = SDEVS_SSB_ASSETS . '/js/';
 
         $scripts = [];
 
@@ -85,7 +85,7 @@ class Assets
      */
     public function get_styles()
     {
-        $plugin_css_assets_path = SDEVS_SOCIAL_SHARE_ASSETS . '/css/';
+        $plugin_css_assets_path = SDEVS_SSB_ASSETS . '/css/';
 
         $styles = [
             'psb-font-awesome' => [

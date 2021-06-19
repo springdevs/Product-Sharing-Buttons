@@ -1,9 +1,9 @@
 <?php
 
-namespace Springdevs\SocialShare;
+namespace Springdevs\SSB;
 
-use Springdevs\SocialShare\Admin\Forms;
-use Springdevs\SocialShare\Admin\Settings;
+use Springdevs\SSB\Admin\Forms;
+use Springdevs\SSB\Admin\Settings;
 
 /**
  * The admin class

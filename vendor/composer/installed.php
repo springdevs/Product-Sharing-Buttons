@@ -1,24 +1,24 @@
 <?php return array (
   'root' => 
   array (
-    'pretty_version' => '1.0.0+no-version-set',
-    'version' => '1.0.0.0',
+    'pretty_version' => 'dev-master',
+    'version' => 'dev-master',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
-    'name' => 'springdevs/product-sharing-buttons',
+    'reference' => '27d4361095b5ba4a053a8dadb289c38faa16b5eb',
+    'name' => 'springdevs/social-sharing-buttons',
   ),
   'versions' => 
   array (
-    'springdevs/product-sharing-buttons' => 
+    'springdevs/social-sharing-buttons' => 
     array (
-      'pretty_version' => '1.0.0+no-version-set',
-      'version' => '1.0.0.0',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => '27d4361095b5ba4a053a8dadb289c38faa16b5eb',
     ),
   ),
 );

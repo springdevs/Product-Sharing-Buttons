@@ -1,27 +1,22 @@
 {
-    "name": "springdevs/product-sharing-buttons",
-    "description": "Social buttons on woocommerce products",
-    "type": "wordpress-plugin",
-    "license": "GPLv2",
-    "authors": [
-        {
-            "name": "SpringDevs",
-            "email": "contact@springdevs.com"
-        }
-    ],
-    "minimum-stability": "dev",
-    "require": {},
-    "require-dev": {
-        "dealerdirect/phpcodesniffer-composer-installer": "*",
-        "wp-coding-standards/wpcs": "*",
-        "phpcompatibility/phpcompatibility-wp": "*"
-    },
-    "autoload": {
-        "psr-4": {
-            "Springdevs\\SocialShare\\": "includes/"
-        },
-        "files": [
-            "includes/functions.php"
-        ]
+  "name": "springdevs/social-sharing-buttons",
+  "description": "Share your zest with your friends and others.",
+  "type": "wordpress-plugin",
+  "license": "GPLv2",
+  "authors": [
+    {
+      "name": "SpringDevs",
+      "email": "contact@springdevs.com"
     }
+  ],
+  "minimum-stability": "dev",
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "Springdevs\\SSB\\": "includes/"
+    },
+    "files": [
+      "includes/functions.php"
+    ]
+  }
 }

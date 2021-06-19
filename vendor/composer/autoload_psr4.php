@@ -6,5 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Springdevs\\SocialShare\\' => array($baseDir . '/includes'),
+    'Springdevs\\SSB\\' => array($baseDir . '/includes'),
 );

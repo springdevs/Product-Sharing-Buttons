@@ -1,10 +1,10 @@
 <?php
 
-namespace Springdevs\SocialShare\Frontend;
+namespace Springdevs\SSB\Frontend;
 
 /**
  * Class Product
- * @package Springdevs\SocialShare\Frontend
+ * @package Springdevs\SSB\Frontend
  */
 class Product
 {
@@ -39,7 +39,7 @@ class Product
     public function social_share_template()
     {
         $social_buttons = $this->social_buttons();
-        include_once SDEVS_SOCIAL_SHARE_PATH . '/templates/' . get_option('psb_button_design', 3) . '.php';
+        include_once SDEVS_SSB_PATH . '/templates/' . get_option('psb_button_design', 3) . '.php';
     }
 
     public function social_buttons()
