@@ -4,6 +4,7 @@ namespace Springdevs\SSB;
 
 use Springdevs\SSB\Frontend\Post;
 use Springdevs\SSB\Frontend\Product;
+use Springdevs\SSB\Illuminate\Widget;
 
 /**
  * Frontend handler class
@@ -19,5 +20,6 @@ class Frontend
             new Product();
         }
         new Post();
+        new Widget();
     }
 }
