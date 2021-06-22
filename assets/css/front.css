@@ -31,6 +31,12 @@
   font-size: 25px;
   overflow: hidden;
   position: relative;
+  outline : none;
+}
+.psb-effect a:hover,
+.psb-effect a:focus,
+.psb-effect a:active {
+  outline : none;
 }
 .psb-effect a i {
   position: relative;
