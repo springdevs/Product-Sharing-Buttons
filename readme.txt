@@ -49,6 +49,11 @@ Share your zest with your friends and others.
 
 == Changelog ==
 
+    = 1.0.2 =
+        * Fix Display share buttons in My Account, Cart, Checkout and other pages.
+        * Add a setting to control open social share link as blank tab or same tab
+        * Improve code quality
+
     = 1.0.1 =
         * Add social share on general posts
         * Add social links widget
