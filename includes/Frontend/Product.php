@@ -42,8 +42,7 @@ class Product
         include_once SDEVS_SSB_PATH . '/templates/' . get_option('psb_button_design', 3) . '.php';
     }
 
-    public function social_buttons()
-    {
+    public function social_buttons(): array {
         global $product;
         $buttons = [];
         $social_buttons = get_option('psb_social_buttons', []);

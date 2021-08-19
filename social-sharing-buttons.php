@@ -3,7 +3,7 @@
 Plugin Name: Social Sharing Button
 Plugin URI: https://wordpress.org/plugins/wcma-social-sharing-button
 Description: Share your zest with your friends and others.
-Version: 1.0.1
+Version: 1.0.2
 Author: SpringDevs
 Author URI: https://springdevs.com/
 License: GPLv2
@@ -57,14 +57,14 @@ final class Sdevs_ssb
      *
      * @var string
      */
-    const version = '1.0.1';
+    const version = '1.0.2';
 
     /**
      * Holds various class instances
      *
      * @var array
      */
-    private $container = [];
+    private array $container = [];
 
     /**
      * Constructor for the Sdevs_social_share class

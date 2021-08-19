@@ -1,5 +1,5 @@
 <div class="wrap">
-    <h3 style="text-align: center;"><?php _e('Woocommerce Product Social Share Buttons', 'sdevs_social_share'); ?></h3>
+    <h3 style="text-align: center;"><?php _e('Product Social Share Buttons', 'sdevs_social_share'); ?></h3>
     <?php settings_errors(); ?>
     <form method="POST">
         <?php wp_nonce_field('psb_settings_form'); ?>
@@ -55,6 +55,16 @@
                                     <option value="<?php echo $button_position_key; ?>" <?php if (get_option('psb_buttons_visible_position', 'default') === $button_position_key) echo 'selected'; ?>><?php echo $button_position_value; ?></option>
                                 <?php endforeach; ?>
                             </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <label for="blank_tab_enable">
+                                <?php _e('Open Share Link as new tab', 'sdevs_social_share'); ?>
+                            </label>
+                        </th>
+                        <td>
+                            <input name="blank_tab_enable" type="checkbox" id="blank_tab_enable" value="1" <?php if(get_option('blank_tab_enable', true)) echo 'checked'; ?> />
                         </td>
                     </tr>
                     <tr>

@@ -2,11 +2,13 @@
 
 namespace Springdevs\SSB\Illuminate;
 
+use WP_Widget;
+
 /**
  * Class SocialLinks
  * @package Springdevs\SSB\Illuminate
  */
-class SocialLinks extends \WP_Widget
+class SocialLinks extends WP_Widget
 {
      /**
      * Sets up the widgets name etc
@@ -104,8 +106,7 @@ foreach ($fields as $key => $field) {
      *
      * @return array
      */
-    public function update($new_instance, $old_instance)
-    {
+    public function update($new_instance, $old_instance): array {
         $fields = ssb_widget_fields();
         // processes widget options to be saved
         $instance = [];

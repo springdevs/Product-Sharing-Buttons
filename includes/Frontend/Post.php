@@ -11,14 +11,15 @@ class Post
 
     public function __construct()
     {
-        add_filter('the_content', function($content){
-            $content .= $this->get_template();
-            return $content;
-        });
+        add_filter('the_content', [$this, 'display_buttons']);
     }
 
-    public function get_template()
-    {
+    public function display_buttons($content): string {
+        if(is_single()) $content .= $this->get_template();
+        return $content;
+    }
+
+    public function get_template() {
         $social_buttons = $this->social_buttons();
         ob_start();
         include_once SDEVS_SSB_PATH . '/templates/' . get_option('psb_button_design', 3) . '.php';
@@ -27,9 +28,7 @@ class Post
         return $content;
     }
 
-     public function social_buttons()
-    {
-        global $post;
+     public function social_buttons(): array {
         $buttons = [];
         $social_buttons = get_option('psb_social_buttons', []);
         foreach ($social_buttons as $social_button) {

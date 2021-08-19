@@ -4,26 +4,26 @@ Donate link:
 Tags: Social Share, Share to facebook, twitter share, share youtube, Social Network Share
 Requires at least: 1.0.0
 Tested up to: 5.8
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Share your zest with your friends and others. 
+Share your zest with your friends and others.
 
 == Description ==
 
 Share your zest with your friends and others.
 
- 
+
 ## Features
- 
+
 1. Facebook Share
 2. Twitter Share
-3. Linkdin Share 
-4. YouTube Share 
-5. and Share with any other Social network 
- 
+3. LinkedIn Share
+4. YouTube Share
+5. and Share with any other Social network
+
 == Installation ==
 
     = Installation from within WordPress =
@@ -41,13 +41,18 @@ Share your zest with your friends and others.
 
 == Screenshots ==
 
-1. Share Button setup from admin.    
+1. Share Button setup from admin.
 2. Share Button front-end example
 3. Add Social Links widget
 4. Sidebar widget preview
- 
+
 
 == Changelog ==
+
+    = 1.0.2 =
+        * Fix Display share buttons in My Account, Cart, Checkout and other pages.
+        * Add a setting to control open social share link as blank tab or same tab
+        * Improve code quality
 
     = 1.0.1 =
         * Add social share on general posts

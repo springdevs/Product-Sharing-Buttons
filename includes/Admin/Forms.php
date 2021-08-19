@@ -27,10 +27,12 @@ class Forms
             $display_product_share_button = sanitize_text_field($_POST['display_product_share_button']);
             $buttons_visible_position = sanitize_text_field($_POST['buttons_visible_position']);
             $button_design = sanitize_text_field($_POST['button_design']);
+            $blank_tab_enable = isset($_POST['blank_tab_enable']);
 
             update_option('psb_display_product_share_button', $display_product_share_button);
             update_option('psb_buttons_visible_position', $buttons_visible_position);
             update_option('psb_button_design', $button_design);
+            update_option('blank_tab_enable', $blank_tab_enable);
 
             if (is_array($_POST['social_buttons'])) {
                 update_option('psb_social_buttons', $this->sanitize_array_field($_POST['social_buttons']));
@@ -46,13 +48,13 @@ class Forms
 
     /**
      * Recursive sanitation an array
-     * 
-     * @param $array
+     *
+     * @param array $arrays
+     *
+     * @return array
      * @since  0.1
-     * @return mixed
      */
-    public function sanitize_array_field(array $arrays)
-    {
+    public function sanitize_array_field(array $arrays): array {
         $sanitized_array = [];
         foreach ($arrays as $key => $array) {
             $value = false;
