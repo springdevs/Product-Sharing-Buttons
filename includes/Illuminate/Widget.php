@@ -2,8 +2,6 @@
 
 namespace Springdevs\SSB\Illuminate;
 
-use Springdevs\SSB\Illuminate\SocialLinks;
-
 /**
  * Class Widget
  * @package Springdevs\SSB\Illuminate

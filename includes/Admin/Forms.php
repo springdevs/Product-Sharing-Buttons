@@ -46,13 +46,13 @@ class Forms
 
     /**
      * Recursive sanitation an array
-     * 
-     * @param $array
+     *
+     * @param array $arrays
+     *
+     * @return array
      * @since  0.1
-     * @return mixed
      */
-    public function sanitize_array_field(array $arrays)
-    {
+    public function sanitize_array_field(array $arrays): array {
         $sanitized_array = [];
         foreach ($arrays as $key => $array) {
             $value = false;
